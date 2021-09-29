@@ -6,6 +6,10 @@ let controlArr = [{x:0, y:0}]
 let snakeBody = [{x:5, y:10}, {x:5, y:11}, {x:5, y:12}]
 let foodPosition = [{x:0, y:0}]
 let status = true
+let headPosition = snakeBody[0]
+const playSnakeAlert = document.getElementById('play-snake')
+
+window.addEventListener('keydown', () => playSnakeAlert.style.display = 'none' )
 
 function gameloop(currentTime){
     window.requestAnimationFrame(gameloop)
@@ -24,6 +28,9 @@ window.requestAnimationFrame(gameloop)
 function update(){
     updateSnake()
     updateFood()
+    outOfBounds(headPosition)
+    menuPosition()
+    console.log(headPosition.x);
 }
 
 // Draw
@@ -32,8 +39,6 @@ function draw(){
     drawSnake()
     drawFood()
 }
-
-
 
 // Controls
 
@@ -73,7 +78,6 @@ function updateSnake(){
 }
 
 // Food
-
 function randomFoodPosition(){
     foodPosition[0].x = Math.floor(Math.random() * 21 + 1 )
     foodPosition[0].y = Math.floor(Math.random() * 21 + 1 ) 
@@ -112,14 +116,40 @@ function addSegment(expand){
 }
 
 // gameover check function
-
 function outOfBounds(headPosition) {
-    return (
-      headPosition.x < 1 || headPosition.x > 21 ||
-      Headposition.y < 1 || headPosition.y > 21
-    )
-
+    if (headPosition.x < 1 || headPosition.x > 21 || headPosition.y < 1 || headPosition.y > 40) {
+        const alert = document.createElement('section')
+        alert.className = 'alert'
+        alert.innerText = 'Please stay within bounds'
+        document.body.appendChild(alert)
+        setTimeout(()=> location.reload(), 2500)
     }
+}
+
+// menuposition function
+
+function menuPosition() {
+    if (headPosition.x == 10 || headPosition.x == 11 && headPosition.y == 2 || headPosition.y == 3) {
+        console.log('about');
+    }
+}
+
+// #about {
+//     grid-column: 2 / 4;
+//     grid-row: 10 / 11;
+// }
+// #work {
+//     grid-column: 20 / 22;
+//     grid-row: 2 / 3;
+// }
+// #play {
+//     grid-column: 38 / 40;
+//     grid-row: 10 / 11;
+// }
+// #hire {
+//     grid-column: 20 / 22;
+//     grid-row: 20 / 21;
+// }
 
 
     

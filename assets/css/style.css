@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap');
+
+:root{
+    --blue:#246eb9;
+    --orange: #ff6600;
+    --light: #e6e6e6;
+    --dark: #282828;
+    --blue-trans: #246eb9DD;
+    --orange-trans: #ff6600AA;
+    --light-trans: #e6e6e6AA;
+    --dark-trans: #000000DD;
+    --font-content: 'IBM Plex Mono', monospace;
+    --font-header: 'Press Start 2P', cursive;
+  }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-header);
+}
+p {
+    font-family: var(--font-content);
+    font-size: 2rem;
+    color: white;
+}
+h1, h2, h3 {
+    font-family: var(--font-header);
+    color: white;
+}
+
+#gameboard{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+.snake{
+    background-color: var(--blue);
+    width: 100%;
+    height: 100%;
+}
+.food{
+    background-color: var(--orange);
+    width: 100%;
+    height: 100%;
+}
+.alert, #play-snake {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    color: white;
+    width: 30vw;
+    height: 15vh;
+    z-index: 100;  
+}
+#menu {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+
+}
+
+#menu p {
+    margin: 0;
+}
+
+#about {
+    grid-column: 2 / 4;
+    grid-row: 10 / 11;
+}
+#work {
+    grid-column: 20 / 22;
+    grid-row: 2 / 3;
+}
+#play {
+    grid-column: 38 / 40;
+    grid-row: 10 / 11;
+}
+#hire {
+    grid-column: 20 / 22;
+    grid-row: 20 / 21;
+}
