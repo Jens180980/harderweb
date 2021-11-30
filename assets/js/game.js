@@ -10,9 +10,9 @@ let headPosition = snakeBody[0]
 const playSnakeAlert = document.getElementById('play-snake')
 
 window.addEventListener('keydown', () => {
-  playSnakeAlert.innerText = 'Please eat menuitems to navigate'
+  playSnakeAlert.innerText = 'Or eat menuitems to navigate'
   const displayNone = () => playSnakeAlert.style.display = 'none'
-  setTimeout(displayNone, 4000)
+  setTimeout(displayNone, 5000)
 })
 
 function gameloop(currentTime){
@@ -134,27 +134,27 @@ function outOfBounds(headPosition) {
 function menuPosition() {
 
     if (headPosition.x == 10 && headPosition.y == 2) {
-        console.log('about');
+        window.location = './about.html';
     }
     if (headPosition.x == 10 && headPosition.y == 3) {
-        console.log('about');
+        window.location = './about.html';
     }
     if (headPosition.x == 2 && headPosition.y == 20) {
-      console.log('work');
+      window.location = './work.html';
     }
     if (headPosition.x == 2 && headPosition.y == 21) {
-      console.log('work');
+      window.location = './work.html';
     }
     if (headPosition.x == 10 && headPosition.y == 38) {
-        console.log('play');
+        window.location = './play.html';
     }
     if (headPosition.x == 10 && headPosition.y == 39) {
-        console.log('play');
+        window.location = './play.html';
     }
     if (headPosition.x == 20 && headPosition.y == 20) {
-      console.log('hire');
+      window.location = './hire.html';
     }
     if (headPosition.x == 20 && headPosition.y == 21) {
-      console.log('hire');
+      window.location = './hire.html';
     }
 }//End of menuPosition

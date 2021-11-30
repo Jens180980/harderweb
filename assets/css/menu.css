@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap');
+@import url('./variables.css')
 
 :root{
     --blue:#246eb9;
@@ -9,31 +9,10 @@
     --orange-trans: #ff6600AA;
     --light-trans: #e6e6e6AA;
     --dark-trans: #000000DD;
+    --monochr-green: #33ff00;
     --font-content: 'IBM Plex Mono', monospace;
     --font-header: 'Press Start 2P', cursive;
   }
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--dark);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-header);
-}
-p {
-    font-family: var(--font-content);
-    font-size: 2rem;
-    color: white;
-}
-h1, h2, h3 {
-    font-family: var(--font-header);
-    color: white;
-}
 
 #gameboard{
     position: relative;
@@ -44,12 +23,12 @@ h1, h2, h3 {
     height: 100vh;
 }
 .snake{
-    background-color: var(--blue);
+    background-color: var(--monochr-green);
     width: 100%;
     height: 100%;
 }
 .food{
-    background-color: var(--orange);
+    background-color: var(--monochr-green);
     width: 100%;
     height: 100%;
 }
@@ -59,10 +38,10 @@ h1, h2, h3 {
     text-align: center;
     padding: 2rem;
     font-size: 3rem;
-    color: white;
+    color: var(--monochr-green);
     width: 30vw;
     height: 15vh;
-    z-index: 100;  
+    z-index: 100;
 }
 #menu {
     position: absolute;
@@ -77,6 +56,8 @@ h1, h2, h3 {
 
 #menu p {
     margin: 0;
+    color: var(--monochr-green);
+    font-size: 1rem;
 }
 
 #about {
@@ -94,4 +75,9 @@ h1, h2, h3 {
 #hire {
     grid-column: 20 / 22;
     grid-row: 20 / 21;
+}
+#powered {
+  grid-column: 37 / 40;
+  grid-row: 20 / 21;
+  font-size: 0.5rem !important;
 }
