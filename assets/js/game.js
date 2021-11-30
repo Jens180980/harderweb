@@ -9,14 +9,18 @@ let status = true
 let headPosition = snakeBody[0]
 const playSnakeAlert = document.getElementById('play-snake')
 
-window.addEventListener('keydown', () => playSnakeAlert.style.display = 'none' )
+window.addEventListener('keydown', () => {
+  playSnakeAlert.innerText = 'Please eat menuitems to navigate'
+  const displayNone = () => playSnakeAlert.style.display = 'none'
+  setTimeout(displayNone, 4000)
+})
 
 function gameloop(currentTime){
     window.requestAnimationFrame(gameloop)
     const timeSinceLastRender = (currentTime - lastRenderTime) / 1000
     if(timeSinceLastRender < 1 / snakeSpeed) return
     lastRenderTime = currentTime
-    
+
     update()
     draw()
 
@@ -30,7 +34,6 @@ function update(){
     updateFood()
     outOfBounds(headPosition)
     menuPosition()
-    console.log(headPosition.x);
 }
 
 // Draw
@@ -74,13 +77,13 @@ function updateSnake(){
       }
 
     snakeBody[0].x += controlArr[0].x
-    snakeBody[0].y += controlArr[0].y  
+    snakeBody[0].y += controlArr[0].y
 }
 
 // Food
 function randomFoodPosition(){
     foodPosition[0].x = Math.floor(Math.random() * 21 + 1 )
-    foodPosition[0].y = Math.floor(Math.random() * 21 + 1 ) 
+    foodPosition[0].y = Math.floor(Math.random() * 21 + 1 )
 }
 randomFoodPosition()
 
@@ -94,14 +97,14 @@ function drawFood(){
 
 function crashTest(){
 
-    if(snakeBody[0].x === foodPosition[0].x && snakeBody[0].y === foodPosition[0].y){   
+    if(snakeBody[0].x === foodPosition[0].x && snakeBody[0].y === foodPosition[0].y){
         status = false
     }
 }
 
 function updateFood(){
     crashTest()
-    
+
     if(status == false){
         randomFoodPosition()
         status = true
@@ -129,27 +132,29 @@ function outOfBounds(headPosition) {
 // menuposition function
 
 function menuPosition() {
-    if (headPosition.x == 10 || headPosition.x == 11 && headPosition.y == 2 || headPosition.y == 3) {
+
+    if (headPosition.x == 10 && headPosition.y == 2) {
         console.log('about');
     }
-}
-
-// #about {
-//     grid-column: 2 / 4;
-//     grid-row: 10 / 11;
-// }
-// #work {
-//     grid-column: 20 / 22;
-//     grid-row: 2 / 3;
-// }
-// #play {
-//     grid-column: 38 / 40;
-//     grid-row: 10 / 11;
-// }
-// #hire {
-//     grid-column: 20 / 22;
-//     grid-row: 20 / 21;
-// }
-
-
-    
+    if (headPosition.x == 10 && headPosition.y == 3) {
+        console.log('about');
+    }
+    if (headPosition.x == 2 && headPosition.y == 20) {
+      console.log('work');
+    }
+    if (headPosition.x == 2 && headPosition.y == 21) {
+      console.log('work');
+    }
+    if (headPosition.x == 10 && headPosition.y == 38) {
+        console.log('play');
+    }
+    if (headPosition.x == 10 && headPosition.y == 39) {
+        console.log('play');
+    }
+    if (headPosition.x == 20 && headPosition.y == 20) {
+      console.log('hire');
+    }
+    if (headPosition.x == 20 && headPosition.y == 21) {
+      console.log('hire');
+    }
+}//End of menuPosition
