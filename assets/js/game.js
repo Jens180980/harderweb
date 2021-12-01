@@ -10,7 +10,7 @@ let headPosition = snakeBody[0]
 const playSnakeAlert = document.getElementById('play-snake')
 
 window.addEventListener('keydown', () => {
-  playSnakeAlert.innerText = 'Or eat menuitems to navigate'
+  playSnakeAlert.innerText = '...or eat menuitems to navigate'
   const displayNone = () => playSnakeAlert.style.display = 'none'
   setTimeout(displayNone, 5000)
 })
