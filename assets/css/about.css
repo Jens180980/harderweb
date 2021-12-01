@@ -23,16 +23,19 @@ body {
 }
 
 #aboutMain h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
-.menuItemWrap {
+#aboutMenu{
+  padding-top: 4rem;  
+}
+
+ul li {
   border-bottom: 1px solid var(--monochr-green);
-  margin-bottom: 4rem;
+  color: var(--monochr-green);
+  list-style: none;
+  margin: 4rem 0;
   position: relative;
-}
-
-.menuItemWrap h3 {
   text-align: left;
   font-size: 2rem;
   padding: 0;
@@ -40,13 +43,18 @@ body {
 
 .description {
   position: absolute;
-  top: 0%;
-  left: 50%;
-  border: 1px solid var(--monochr-green);
-  padding: 1rem;
-  display: none;
+  top: -100%;
+  opacity: 0%;
+  pointer-events: none;
+  user-select: none;
 }
 
-.showMe {
-  display: block;
+footer {
+  margin-top: 15rem;
+}
+
+canvas {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
 }
