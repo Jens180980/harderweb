@@ -36,7 +36,7 @@
   animation-delay: 4000ms;
 }
 
-/* #mouseLoad {
+#mouseLoad {
   animation: hideLoadComplete 100ms;
   animation-fill-mode: forwards;
   animation-delay: 5000ms;
@@ -47,7 +47,7 @@
   animation: showLoadComplete 100ms;
   animation-fill-mode: forwards;
   animation-delay: 5000ms;
-} */
+}
 
 @keyframes loading {
     0% {width: 0%;}
