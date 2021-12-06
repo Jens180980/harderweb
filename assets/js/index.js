@@ -1,6 +1,6 @@
 window.addEventListener('keydown', (e) => {
   console.log(e.key);
-  if(e.key == 'y'){
+  if(e.key == 'y' || e.key == 'Y'){
     window.location = './menu.html'
   }
   else {
