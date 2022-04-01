@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap');
+
+:root{
+    --blue:#246eb9;
+    --orange: #ff6600;
+    --light: #e6e6e6;
+    --dark: #282828;
+    --blue-trans: #246eb9DD;
+    --orange-trans: #ff6600AA;
+    --light-trans: #e6e6e6AA;
+    --dark-trans: #000000DD;
+    --monochr-green: #33ff00;
+    --font-content: 'IBM Plex Mono', monospace;
+    --font-header: 'Press Start 2P', cursive;
+  }
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-header);
+}
+
+h1, h2, h3, p {
+  color: var(--monochr-green);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}

@@ -1,0 +1,69 @@
+:root{
+    --blue:#246eb9;
+    --orange: #ff6600;
+    --light: #e6e6e6;
+    --dark: #282828;
+    --blue-trans: #246eb9DD;
+    --orange-trans: #ff6600AA;
+    --light-trans: #e6e6e6AA;
+    --dark-trans: #000000DD;
+    --monochr-green: #33ff00;
+    --font-content: 'IBM Plex Mono', monospace;
+    --font-header: 'Press Start 2P', cursive;
+  }
+
+#outerLoader {
+  margin: auto;
+  margin-top: 10rem;
+  width: 40vw;
+  height: 5vh;
+  border: 2px solid var(--monochr-green)
+
+}
+#innnerLoader {
+  animation: loading 4000ms;
+  animation-fill-mode: forwards;
+  height: 100%;
+  background-color: var(--monochr-green);
+  outline: solid black;
+  outline-offset: -2px;
+}
+#loadComplete {
+  margin-top: 10rem;
+  opacity: 0;
+  animation: showLoadComplete 100ms;
+  animation-fill-mode: forwards;
+  animation-delay: 4000ms;
+}
+
+#mouseLoad {
+  animation: hideLoadComplete 100ms;
+  animation-fill-mode: forwards;
+  animation-delay: 5000ms;
+}
+
+#aboutMain > * {
+  opacity: 0;
+  animation: showLoadComplete 100ms;
+  animation-fill-mode: forwards;
+  animation-delay: 5000ms;
+}
+
+@keyframes loading {
+    0% {width: 0%;}
+    10% {width: 25%;}
+    25% {width: 26%;}
+    50% {width: 50%;}
+    75% {width: 55%;}
+    100% {width: 100%;}
+}
+
+@keyframes showLoadComplete {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes hideLoadComplete {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}

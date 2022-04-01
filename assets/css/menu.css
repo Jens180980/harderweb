@@ -1,0 +1,83 @@
+@import url('./variables.css')
+
+:root{
+    --blue:#246eb9;
+    --orange: #ff6600;
+    --light: #e6e6e6;
+    --dark: #282828;
+    --blue-trans: #246eb9DD;
+    --orange-trans: #ff6600AA;
+    --light-trans: #e6e6e6AA;
+    --dark-trans: #000000DD;
+    --monochr-green: #33ff00;
+    --font-content: 'IBM Plex Mono', monospace;
+    --font-header: 'Press Start 2P', cursive;
+  }
+
+#gameboard{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+.snake{
+    background-color: var(--monochr-green);
+    width: 100%;
+    height: 100%;
+}
+.food{
+    background-color: var(--monochr-green);
+    width: 100%;
+    height: 100%;
+}
+.alert, #play-snake {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    color: var(--monochr-green);
+    width: 30vw;
+    height: 15vh;
+    z-index: 100;
+}
+#menu {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+
+}
+
+#menu p {
+    margin: 0;
+    color: var(--monochr-green);
+    font-size: 1rem;
+}
+
+#about {
+    grid-column: 2 / 4;
+    grid-row: 10 / 11;
+}
+#work {
+    grid-column: 20 / 22;
+    grid-row: 2 / 3;
+}
+#play {
+    grid-column: 38 / 40;
+    grid-row: 10 / 11;
+}
+#hire {
+    grid-column: 20 / 22;
+    grid-row: 20 / 21;
+}
+#powered {
+  grid-column: 37 / 40;
+  grid-row: 20 / 21;
+  font-size: 0.5rem !important;
+}

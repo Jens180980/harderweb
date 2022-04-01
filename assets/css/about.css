@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap');
+
+:root{
+    --blue:#246eb9;
+    --orange: #ff6600;
+    --light: #e6e6e6;
+    --dark: #282828;
+    --blue-trans: #246eb9DD;
+    --orange-trans: #ff6600AA;
+    --light-trans: #e6e6e6AA;
+    --dark-trans: #000000DD;
+    --monochr-green: #33ff00;
+    --font-content: 'IBM Plex Mono', monospace;
+    --font-header: 'Press Start 2P', cursive;
+  }
+
+body {
+  cursor: url('../img/cursor.cur'), default;
+}
+
+#mouseLoad {
+  position: absolute;
+}
+
+#aboutMain h1 {
+  margin-bottom: 1rem;
+}
+
+#aboutMenu{
+  padding-top: 4rem;  
+}
+
+ul li {
+  border-bottom: 1px solid var(--monochr-green);
+  color: var(--monochr-green);
+  list-style: none;
+  margin: 4rem 0;
+  position: relative;
+  text-align: left;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.description {
+  position: absolute;
+  top: -100%;
+  opacity: 0%;
+  pointer-events: none;
+  user-select: none;
+}
+
+footer {
+  margin-top: 15rem;
+}
+
+canvas {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
+}
