@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Press+Start+2P&display=swap");
 
-:root{
-    --blue:#246eb9;
-    --orange: #ff6600;
-    --light: #e6e6e6;
-    --dark: #282828;
-    --blue-trans: #246eb9DD;
-    --orange-trans: #ff6600AA;
-    --light-trans: #e6e6e6AA;
-    --dark-trans: #000000DD;
-    --monochr-green: #33ff00;
-    --font-content: 'IBM Plex Mono', monospace;
-    --font-header: 'Press Start 2P', cursive;
-  }
+:root {
+  --blue: #246eb9;
+  --orange: #ff6600;
+  --light: #e6e6e6;
+  --dark: #282828;
+  --blue-trans: #246eb9dd;
+  --orange-trans: #ff6600aa;
+  --light-trans: #e6e6e6aa;
+  --dark-trans: #000000dd;
+  --monochr-green: #33ff00;
+  --font-content: "IBM Plex Mono", monospace;
+  --font-header: "Press Start 2P", cursive;
+}
 
 body {
-  cursor: url('../img/cursor.cur'), default;
+  cursor: url("../img/cursor.cur"), default;
 }
 
 #mouseLoad {
@@ -26,8 +26,8 @@ body {
   margin-bottom: 1rem;
 }
 
-#aboutMenu{
-  padding-top: 4rem;  
+#aboutMenu {
+  padding-top: 4rem;
 }
 
 ul li {
@@ -50,7 +50,15 @@ ul li {
 }
 
 footer {
+  display: relative;
   margin-top: 15rem;
+}
+
+#javascript {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  width: 10vw;
 }
 
 canvas {
