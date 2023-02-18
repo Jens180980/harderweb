@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+:root {
+  --main-bg-color: #313131;
+  --sec-bg-color: #414141;
+  --prim-color: #ffd600;
+  --sec-color: #ffa800;
+}
+
+.modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-wrapper {
+  color: var(--prim-color);
+}
+
+.txt-wrapper {
+  margin-bottom: 4rem;
+  padding: 1.5rem 5rem;
+  text-align: center;
+  border: 15px solid transparent;
+  border-image-source: url(asterix_grid.png);
+  border-image-slice: 33% 33%;
+  border-image-repeat: round;
+}
+
+.top {
+  text-align: left;
+}
+
+.first-line {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--prim-color);
+  animation: typing 3s steps(40, end);
+  animation-fill-mode: forwards;
+  width: 18em;
+}
+
+.second-line {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.1s;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+
+.third-line {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.1s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.fourth-line {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.1s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.middle,
+.bottom {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.flashing-slow {
+  animation-name: flashing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.flashing-fast {
+  animation-name: flashing;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flashing {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
