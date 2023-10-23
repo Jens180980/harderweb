@@ -54,6 +54,11 @@ ul li {
   user-select: none;
 }
 
+.contact-info h2 {
+  color: #ffd600;
+  text-align: center;
+}
+
 footer {
   display: flex;
   flex-direction: column;
