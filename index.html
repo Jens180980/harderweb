@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/loader.css" />
-    <title>Jens Harder Portfolio</title>
+    <link rel="stylesheet" href="./loading.css" />
+    <script src="./loading.js" defer></script>
+    <title>Jens Harder Portfolio - Loading...</title>
   </head>
   <body>
-    <h1>Harderweb - Webdevelopment and beyond</h1>
+    <div class="modal-wrapper">
+      <div class="inner-wrapper">
+        <div class="txt-wrapper top">
+          <p class="first-line">
+            >run harderweb.dk @ 185.20.205.46<span class="flashing-fast"
+              >_</span
+            >
+          </p>
+          <p class="second-line">connected</p>
+          <p class="third-line">loading interfaces</p>
+          <p class="fourth-line">interfaces loaded</p>
+        </div>
+        <div class="txt-wrapper middle">
+          <p>Welcome to harderweb.dk</p>
+          <p class="flashing-slow">PRESS ANY KEY TO CONTINUE</p>
+        </div>
+      </div>
+    </div>
   </body>
-  <script>
-    if (screen.width < 700) {
-      document.location = "https://mobile.harderweb.dk/loading.html";
-    } else {
-      document.location = "https://main.harderweb.dk/loading.html";
-    }
-  </script>
 </html>
