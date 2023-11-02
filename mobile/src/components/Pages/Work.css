@@ -1,0 +1,22 @@
+.work-wrap {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.some {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.some a {
+  border: 1px solid #07c803;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.work-heading {
+  text-align: center;
+}
