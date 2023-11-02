@@ -1,0 +1,13 @@
+.under-construction {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.back-home {
+  border: 1px solid #07c803;
+  padding: 0.5rem;
+}

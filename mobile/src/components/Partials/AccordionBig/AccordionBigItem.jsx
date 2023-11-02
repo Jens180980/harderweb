@@ -4,7 +4,7 @@ import { IconContext } from "react-icons/lib";
 import { useState } from "react";
 import "./AccordionBig.css";
 
-export const AccordionBigItem = ({ title, content, logo }) => {
+export const AccordionBigItem = ({ title, content, logo, url }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -12,7 +12,7 @@ export const AccordionBigItem = ({ title, content, logo }) => {
       <div className="accordion-big-item" onClick={() => setIsOpen(!isOpen)}>
         <Icon nameIcon={logo} />
         <h2>{title}</h2>
-        <NavLink className={isOpen ? "accordionNavlink" : "linkShows"}>
+        <NavLink to={url} className={isOpen ? "accordionNavlink" : "linkShows"}>
           {content}
         </NavLink>
       </div>

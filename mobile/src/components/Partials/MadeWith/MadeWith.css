@@ -1,0 +1,16 @@
+.made-with-wrap {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.made-with-wrap p {
+  margin-bottom: 1rem;
+}
+
+.made-with-wrap a {
+  border: 1px solid #07c803;
+  padding: 0.5rem;
+}

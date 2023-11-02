@@ -2,6 +2,7 @@ import { Header } from "../Partials/Header/Header";
 import Footer from "../Partials/Footer/Footer";
 import { AccordionBig } from "../Partials/AccordionBig/AccordionBig";
 import "./Home.css";
+import { MadeWith } from "../Partials/MadeWith/MadeWith";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <main className="home-main">
         <AccordionBig />
       </main>
-      <Footer />
+      <MadeWith />
     </div>
   );
 };
