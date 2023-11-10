@@ -1,0 +1,31 @@
+{
+  "name": "harderweb_likes",
+  "version": "1.0.0",
+  "description": "API to likes-db for portfolio Jens Harder at harderweb.dk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jens180980/songbook.git"
+  },
+  "keywords": [
+    "sange"
+  ],
+  "author": "Jens Harder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jens180980/songbook/issues"
+  },
+  "homepage": "https://github.com/Jens180980/songbook#readme",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.13.0"
+  }
+}
