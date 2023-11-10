@@ -33,4 +33,4 @@ class LikesModel {
   }; // End Update
 } // End Class
 
-export default SongModel;
+export default LikesModel;
