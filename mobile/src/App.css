@@ -12,6 +12,7 @@ body,
   height: 100vh;
   background-color: #313131;
   font-family: "IBM Plex Mono", monospace;
+  overflow: hidden;
 }
 
 h1,
