@@ -10,11 +10,10 @@ const Work = () => {
     <>
       <Header pageTitle="work" />
       <section className="work-wrap">
-        <p className="work-heading">Touch image for more details</p>
-        <Slider />
+        <p className="work-heading">Gallery coming soon...</p>
         <div className="some">
-          <a href="#">github</a>
-          <a href="#">codepen</a>
+          <a href="https://github.com/Jens180980">github</a>
+          <a href="https://codepen.io/jens180980">codepen</a>
         </div>
         <LikeMe />
       </section>
