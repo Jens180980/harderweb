@@ -10,7 +10,7 @@ const Work = () => {
     <>
       <Header pageTitle="work" />
       <section className="work-wrap">
-        <p className="work-heading">Gallery coming soon...</p>
+        <p className="work-heading">Touch and caress image for more info...</p>
         <Gallery />
         <div className="some">
           <a

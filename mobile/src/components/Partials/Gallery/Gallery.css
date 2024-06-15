@@ -1,0 +1,17 @@
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 3rem;
+  gap: 1rem;
+}
+
+.gallery-item {
+  height: 5rem;
+
+  overflow: hidden;
+}
+
+.gallery-item img {
+  height: 100%;
+  filter: hue-rotate(270deg);
+}

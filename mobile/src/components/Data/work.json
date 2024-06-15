@@ -1,0 +1,28 @@
+{
+  "work": [
+    {
+      "id": "1",
+      "title": "3WIS",
+      "content": "Description of web site one",
+      "link": "./media/3wis.png"
+    },
+    {
+      "id": "2",
+      "title": "A-Leaf",
+      "content": "Description of web site two",
+      "link": "./media/aleaf.png"
+    },
+    {
+      "id": "3",
+      "title": "Hylling",
+      "content": "Description of web site three",
+      "link": "./media/hylling.png"
+    },
+    {
+      "id": "4",
+      "title": "Ebeltoft Havnefront",
+      "content": "Description of web site four",
+      "link": "./media/ebeltoft.png"
+    }
+  ]
+}
