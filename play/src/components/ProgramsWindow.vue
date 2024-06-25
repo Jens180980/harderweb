@@ -1,21 +1,23 @@
 <template>
-  <section ref="programWrapper">
-    <div class="header">
-      <div class="close"><p>-</p></div>
-      <div class="header-txt" @click.self="movePrograms">
-        <h5>Program Manager</h5>
+  <div class="outer" @drop="Stopmove" @dragover.prevent @dragenter.prevent>
+    <section ref="programWrapper" draggable="true" @dragstart="Startmove">
+      <div class="header">
+        <div class="close"><p>-</p></div>
+        <div class="header-txt">
+          <h5>Program Manager</h5>
+        </div>
+        <div class="updown-wrap">
+          <div class="down">&#9660;</div>
+          <div class="up">&#9650;</div>
+        </div>
       </div>
-      <div class="updown-wrap">
-        <div class="down">&#9660;</div>
-        <div class="up">&#9650;</div>
+      <div class="main-content">
+        <div v-for="program in programs" :key="program.id">
+          <img :src="program.iconpath" :alt="program.name" />
+        </div>
       </div>
-    </div>
-    <div class="main-content">
-      <div v-for="program in programs" :key="program.id">
-        <img :src="program.iconpath" :alt="program.name" />
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -41,22 +43,31 @@ export default {
     };
   },
   methods: {
-    movePrograms(e) {
-      this.posX = e.clientX;
-      this.posY = e.clientY;
-      console.log(this.posX);
-      this.$refs.programWrapper.style.top = this.posX;
+    Startmove(e) {
+      console.log("drag started " + e.clientX);
+    },
+    Stopmove(e) {
+      this.$refs.programWrapper.style.top = e.clientY + "px";
+      this.$refs.programWrapper.style.left = e.clientX + "px";
     },
   },
 };
 </script>
 
 <style scoped>
+.outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 section {
   width: 20vw;
   background-color: gray;
   position: absolute;
-
+  top: 200px;
+  left: 500px;
   border: 3px double black;
 }
 .header {
@@ -72,6 +83,7 @@ section {
   height: 2rem;
 }
 .header-txt {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,6 +91,13 @@ section {
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+.header-txt h5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
 .updown-wrap {
   display: flex;
@@ -101,8 +120,9 @@ section {
 }
 .main-content {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   height: 40vh;
   background-color: white;
+  padding: 1rem 2rem;
 }
 </style>
