@@ -11,7 +11,7 @@
 }
 
 .slider-nav {
-  margin-top: 3rem;
+  margin: 2rem 0 2rem 0;
   display: flex;
   gap: 4rem;
   transition: all 0.2s linear;
@@ -21,4 +21,9 @@
   font-weight: 700;
   font-size: 1.2rem;
   margin-top: -0.5rem;
+}
+
+.contact {
+  display: block;
+  text-align: center;
 }

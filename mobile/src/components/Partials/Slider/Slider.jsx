@@ -45,6 +45,9 @@ const Slider = () => {
           WorkExperience
         </p>
       </div>
+      <a className="contact" href="mailto:jens@harderweb.dk">
+        jens@harderweb.dk
+      </a>
     </div>
   );
 };
