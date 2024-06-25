@@ -6,10 +6,12 @@ import "./Gallery.css";
 function Gallery() {
   const [clickedImg, setClickedImg] = useState(null);
   const [caseDescrip, setCaseDescrip] = useState("");
+  const [link, setLink] = useState("");
 
   const handleClick = (item) => {
-    setClickedImg(item.link);
+    setClickedImg(item.img);
     setCaseDescrip(item.content);
+    setLink(item.link);
   };
 
   return (
@@ -17,7 +19,7 @@ function Gallery() {
       {data.work.map((item, index) => (
         <div className="gallery-item" key={index}>
           <img
-            src={item.link}
+            src={item.img}
             alt={item.title}
             onClick={() => handleClick(item)}
           />
@@ -29,6 +31,7 @@ function Gallery() {
             clickedImg={clickedImg}
             setClickedImg={setClickedImg}
             caseDescrip={caseDescrip}
+            link={link}
           />
         )}
       </div>

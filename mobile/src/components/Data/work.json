@@ -3,26 +3,30 @@
     {
       "id": "1",
       "title": "3WIS",
-      "content": "Description of web site one",
-      "link": "./media/3wis.png"
+      "content": "This site has an easy and intuitive on-page navigation and beautiful changing color gradings. It's made with WP, Oxygen, and a lot of custom code. Click image to visit. ",
+      "img": "./media/3wis.png",
+      "link": "https://3wis.dk/"
     },
     {
       "id": "2",
       "title": "A-Leaf",
-      "content": "Description of web site two",
-      "link": "./media/aleaf.png"
+      "content": "This site has a lot of custom stuff. The on-page navigation on frontpage easily takes you to the desired area. The available jobs page is connected to an external API and custom built with a WP PHP plugin. Click image to visit. ",
+      "img": "./media/aleaf.png",
+      "link": "https://a-leaf.com/"
     },
     {
       "id": "3",
       "title": "Hylling",
-      "content": "Description of web site three",
-      "link": "./media/hylling.png"
+      "content": "Hylling is a company in the energy sector, and covers a lot of different areas. This site aims give the visitor a quick road to the specific area of their interest, all with a modern look easy on the eye. It is also WP Oxygen, and relies heavy on reusable components. Click image to visit.",
+      "img": "./media/hylling.png",
+      "link": "https://hyllingas.dk/"
     },
     {
       "id": "4",
       "title": "Ebeltoft Havnefront",
-      "content": "Description of web site four",
-      "link": "./media/ebeltoft.png"
+      "content": "This Real Estate site is a classic WP Elementor site with a twist. It comes with a custom graphic apartment picker, and a 3D/VR tour of the luxurious apartments. Click image to visit (with a VR headset if you have one).",
+      "img": "./media/ebeltoft.png",
+      "link": "https://ebeltofthavnefront.dk/"
     }
   ]
 }
